@@ -1,0 +1,76 @@
+/* - - - - VARIABLES - - - - */
+:root {
+    --color-base-blue: #04293A;
+    --color-dark-blue: #041C32;
+    /* input background */
+    --color-light-blue: #064663;
+    --color-hover-text: #2D4263;
+    --color-light-yellow: #ECDBBA;
+    --color-full-yellow: #ECB356;
+    --color-red: #C84B31;
+
+    --title-font: 'Bebas Neue', cursive;
+    --subtitle-font: 'Playfair Display', serif;
+    --body-font: 'Montserrat', sans-serif;
+}
+
+/* - - - - RESET CSS - - - - */
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: none;
+    box-sizing: border-box;
+    font-family: inherit;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+}
+
+a img {
+    border: none;
+}
+
+button,
+a {
+    cursor: pointer;
+    color: inherit;
+}
+
+textarea {
+    resize: none;
+}
+
+button,
+textarea,
+select {
+    appearance: none !important;
+    border-radius: 0;
+}
+
+/* - - - - END RESET CSS - - - - */
+
+body {
+    background-color: var(--color-base-blue);
+}
+
+/* - - - - HEADER - - - - */
+/* - - - - END HEADER - - - - */
+
+/* - - - - PORTFOLIO - - - - */
+/* - - - - END PORTFOLIO - - - - */
+
+/* - - - - ABOUT - - - - */
+/* - - - - END ABOUT - - - - */
+
+/* - - - - CONTACT - - - - */
+/* - - - - END CONTACT - - - - */
+
+/* - - - - FOOTER - - - - */
+/* - - - - END FOOTER - - - - */
