@@ -1,248 +1,310 @@
 /* - - - - VARIABLES - - - - */
 :root {
-    --color-base-blue: #04293A;
-    --color-dark-blue: #041C32;
-    /* input background */
-    --color-light-blue: #064663;
-    --color-hover-text: #2D4263;
-    --color-light-yellow: #ECDBBA;
-    --color-full-yellow: #ECB356;
-    --color-red: #C84B31;
+	--color-base-blue: #04293A;
+	--color-dark-blue: #041C32;
+	/* input background */
+	--color-light-blue: #064663;
+	--color-hover-text: #2D4263;
+	--color-light-yellow: #ECDBBA;
+	--color-full-yellow: #ECB356;
+	--color-red: #C84B31;
 
-    --title-font: 'Bebas Neue', cursive;
-    --subtitle-font: 'Playfair Display', serif;
-    --body-font: 'Montserrat', sans-serif;
+	--title-font: 'Bebas Neue', cursive;
+	--subtitle-font: 'Playfair Display', serif;
+	--body-font: 'Montserrat', sans-serif;
 }
 
 /* - - - - RESET CSS - - - - */
 
 * {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    outline: none;
-    box-sizing: border-box;
-    background: transparent;
-    font-family: inherit;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: none;
+	box-sizing: border-box;
+	background: transparent;
+	font-family: inherit;
 }
 
 html {
-    scroll-behavior: smooth;
+	scroll-behavior: smooth;
 }
 
 a {
-    text-decoration: none;
+	text-decoration: none;
 }
 
 a img {
-    border: none;
+	border: none;
 }
 
 button,
 a {
-    cursor: pointer;
-    color: inherit;
+	cursor: pointer;
+	color: inherit;
 }
 
 textarea {
-    resize: none;
+	resize: none;
 }
 
 button,
 textarea,
 select {
-    appearance: none !important;
-    border-radius: 0;
+	appearance: none !important;
+	border-radius: 0;
 }
 
 /* - - - - END RESET CSS - - - - */
 
 body {
-    background-color: var(--color-base-blue);
+	background-color: var(--color-base-blue);
 }
 
 /* - - - - NAVIGATION - - - - */
 .header {
-    position: fixed;
-    width: 100%;
-    z-index: 100;
+	position: fixed;
+	width: 100%;
+	z-index: 100;
 
-    padding: 25px 0 12px;
-    background-color: var(--color-base-blue);
+	padding: 25px 0 12px;
+	background-color: var(--color-base-blue);
 
-    transition: padding .25s;
+	transition: padding .25s;
 }
 
 .header.active {
-    padding-top: 16px;
-    border-bottom: 1px solid var(--color-light-blue);
+	padding-top: 16px;
+	border-bottom: 1px solid var(--color-light-blue);
 }
 
 
 .navbar__container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 0 12px;
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 0 12px;
 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 
-    font-family: var(--body-font);
+	font-family: var(--body-font);
 }
 
 .navbar__container>.logo {
-    position: relative;
+	position: relative;
 
 }
 
 .logo>img {
-    height: 26px;
+	height: 26px;
 }
 
 .logo-underline {
-    position: relative;
-    left: 42px;
-    bottom: 6px;
+	position: relative;
+	left: 42px;
+	bottom: 6px;
 
-    width: 14px;
-    height: 3px;
+	width: 14px;
+	height: 3px;
 
-    border-radius: 2px;
+	border-radius: 2px;
 
-    background-color: #0057FF;
+	background-color: #0057FF;
 }
 
 .navigation-container {
-    position: absolute;
-    top: 70px;
-    left: 0;
-    width: 250px;
-    height: 100vh;
+	position: absolute;
+	top: 70px;
+	left: 0;
+	width: 250px;
+	height: 100vh;
 
-    padding: 10px 10px;
+	padding: 10px 10px;
 
-    transform: translateX(-266px);
-    background-color: var(--color-light-yellow);
+	transform: translateX(-266px);
+	background-color: var(--color-light-yellow);
 
-    transition: transform .5s ease-in;
+	transition: transform .5s ease-in;
 }
 
 .navigation-container.active {
-    top: 62px;
+	top: 62px;
 }
 
 .navigation-container.open {
-    transform: translateX(0px);
+	transform: translateX(0px);
 }
 
 .navbar__list {
-    list-style: none;
+	list-style: none;
 }
 
 .navbar__list-item {
-    color: var(--color-hover-text);
-    padding: 20px 0px 8px;
-    border-bottom: 6px solid transparent;
+	color: var(--color-hover-text);
+	padding: 20px 0px 8px;
+	border-bottom: 6px solid transparent;
 
-    transition: .35s;
+	transition: .35s;
 }
 
 .navbar__list-item:hover {
-    font-weight: 600;
-    text-transform: capitalize;
+	font-weight: 600;
+	text-transform: capitalize;
 
-    padding-left: 10px;
-    border-bottom: 6px solid var(--color-full-yellow);
+	padding-left: 10px;
+	border-bottom: 6px solid var(--color-full-yellow);
 }
 
 .hamburger-menu {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 5px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 5px;
 
-    width: 32px;
-    height: 32px;
-    transition: all .5s ease-in-out;
+	width: 32px;
+	height: 32px;
+	transition: all .5s ease-in-out;
 }
 
 .bar-top,
 .bar-mid,
 .bar-bottom {
-    position: relative;
+	position: relative;
 
-    height: 3px;
-    width: 20px;
-    border-radius: 2px;
+	height: 3px;
+	width: 20px;
+	border-radius: 2px;
 
-    background-color: white;
-    transition: all .5s ease-in-out;
+	background-color: white;
+	transition: all .5s ease-in-out;
 }
 
 .bar-top.active {
-    transform: translateY(8px) rotate(45deg);
+	transform: translateY(8px) rotate(45deg);
 
 }
 
 .bar-mid.active {
-    width: 0;
-    opacity: 0;
+	width: 0;
+	opacity: 0;
 }
 
 .bar-bottom.active {
-    transform: translateY(-8px) rotate(-45deg)
+	transform: translateY(-8px) rotate(-45deg)
 }
 
 .hamburger-menu.active:hover {
-    background-color: var(--color-red);
+	background-color: var(--color-red);
 }
 
 /* - - - - END NAVIGATION - - - - */
 
 /* - - - - MAIN - - - - */
 .main-container {
-    position: absolute;
-    width: 100%;
-    height: 100vh;
+	position: absolute;
+	width: 100%;
+	height: 100vh;
 }
 
 .image-container {
-    width: 100%;
-    height: 100vh;
+	width: 100%;
+	height: 90vh;
 
-    background-image: linear-gradient(180deg, #04293A 12%, rgba(4, 41, 58, 0.4) 40.1%, #04293A 85%), url(/assets/img/eberhard-grossgasteiger-ofxFTUWoHNY-unsplash_S.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed;
+	background-image: linear-gradient(180deg, #04293A 12%, rgba(4, 41, 58, 0.4) 40.1%, #04293A 85%), url(/assets/img/eberhard-grossgasteiger-ofxFTUWoHNY-unsplash_S.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-attachment: fixed;
 }
 
 .name-container {
-    position: absolute;
-    top: 35vh;
+	position: absolute;
+	top: 35vh;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 100%;
 
-    padding: 20px;
+	padding: 20px;
 
-    font-family: var(--title-font);
-    font-size: 60px;
-    line-height: 110px;
-    letter-spacing: 2px;
-    text-align: center;
+	font-family: var(--title-font);
+	font-size: 60px;
+	line-height: 110px;
+	letter-spacing: 2px;
+	text-align: center;
 
-    -webkit-text-fill-color: transparent;
-    -webkit-text-stroke: .1px;
-    -webkit-text-stroke-color: var(--color-full-yellow);
+	-webkit-text-fill-color: transparent;
+	-webkit-text-stroke: 0.001px var(--color-full-yellow);
 
-    color: rgba(4, 41, 58, 0);
+	color: rgba(4, 41, 58, 0);
+}
+
+.forward-icon-container {
+	position: relative;
+	bottom: 10%;
+
+	width: 30px;
+	height: 55px;
+
+	margin: 0 auto;
+	text-align: center;
+
+	border: 2px solid rgba(255, 255, 255, .5);
+	border-radius: 15px;
+
+	transition-duration: .3s;
+	transition-delay: .1s;
+}
+
+.forward-icon-container:hover {
+	filter: drop-shadow(0 0 4px rgba(255, 255, 255, 0.7));
+}
+
+.fa-sort-down {
+	width: 26px;
+	height: 51px;
+
+	padding-top: 25px;
+	font-size: 20px;
+	color: rgba(255, 255, 255, .5);
+
+	transition-duration: .3s;
+	transition-delay: .1s;
+}
+
+.fa-sort-down:hover {
+	animation: down-forward .8s ease-in infinite;
+	filter: drop-shadow(0 0 4px #fff);
+}
+
+@keyframes down-forward {
+	0% {
+		padding-top: 25px
+	}
+
+
+	60% {
+		padding-top: 20px
+	}
+
+	100% {
+		padding-top: 25px
+	}
+}
+
+.bottom-transition {
+	position: absolute;
+	width: 100%;
+	height: 60vh;
+	background-color: #C84B31;
 }
 
 /* - - - - END MAIN - - - - */
 
 /* - - - - PORTFOLIO - - - - */
 .demo {
-    height: 1000vh;
+	height: 1000vh;
 }
 
 /* - - - - END PORTFOLIO - - - - */
