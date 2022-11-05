@@ -373,13 +373,13 @@ body {
 
 .image-name:first-child {
 	position: absolute;
-	right: -40px;
+	right: -35px;
 	bottom: 30px;
 }
 
 .image-name:last-child {
 	position: absolute;
-	right: 0;
+	right: 5px;
 	bottom: 0;
 }
 
@@ -409,6 +409,9 @@ body {
 }
 
 .skill-container {
+	position: relative;
+	bottom: 0;
+
 	display: flex;
 	flex-direction: column;
 
@@ -417,37 +420,18 @@ body {
 	margin-bottom: 27px;
 
 	cursor: pointer;
-}
-
-.skill-container:hover .skill-name {
-	opacity: 1;
 
 	transition-duration: .3s;
 	transition-delay: .1s;
 }
 
-.skill-container:hover .skill-icon {
-	color: rgb(255, 255, 255);
-
-	transition-duration: .3s;
-	transition-delay: .1s;
+.web {
+	height: 88px;
 }
 
-.skill-container:hover .xp-level {
-	height: 6px;
-	background-color: var(--color-full-yellow);
-
-	transition-duration: .3s;
-	transition-delay: .1s;
+.skill-container:hover {
+	bottom: 5px;
 }
-
-.skill-container:hover .reference-bar {
-	background-color: rgb(255, 255, 255);
-
-	transition-duration: .3s;
-	transition-delay: .1s;
-}
-
 
 .skill-name {
 	opacity: 0;
@@ -460,6 +444,13 @@ body {
 	font-size: 8px;
 	font-weight: 700;
 	color: white;
+
+	transition-duration: .3s;
+	transition-delay: .1s;
+}
+
+.skill-container:hover .skill-name {
+	opacity: 1;
 }
 
 .skill-icon {
@@ -467,6 +458,27 @@ body {
 	text-align: center;
 	font-size: 50px;
 	color: rgba(255, 255, 255, .3);
+
+	transition-duration: .3s;
+	transition-delay: .1s;
+}
+
+.skill-container:hover .skill-icon {
+	color: rgb(255, 255, 255);
+}
+
+.reference-bar {
+	width: 100%;
+	height: 1px;
+
+	background-color: rgba(255, 255, 255, .3);
+
+	transition-duration: .3s;
+	transition-delay: .1s;
+}
+
+.skill-container:hover .reference-bar {
+	background-color: rgb(255, 255, 255);
 }
 
 .xp-level {
@@ -476,13 +488,15 @@ body {
 	margin-bottom: 1px;
 
 	background-color: var(--color-light-yellow);
+
+	transition-duration: .3s;
+	transition-delay: .1s;
 }
 
-.reference-bar {
-	width: 100%;
-	height: 1px;
+.skill-container:hover .xp-level {
+	height: 6px;
+	background-color: var(--color-full-yellow);
 
-	background-color: rgba(255, 255, 255, .3);
 }
 
 .html-knowlege {
@@ -516,19 +530,13 @@ body {
 	padding: 40px 0;
 }
 
-.design {
+.designs {
 	margin: 0 auto;
 }
 
-.skill-container:hover .design-skill-name {
-	font-weight: 700;
-	text-transform: uppercase;
-	color: rgb(255, 255, 255);
-
-	transition-duration: .3s;
-	transition-delay: .1s;
+.design {
+	height: 29px;
 }
-
 
 .design-skill-name {
 	margin-bottom: 10px;
@@ -538,6 +546,15 @@ body {
 	font-weight: 500;
 
 	color: rgba(255, 255, 255, .3);
+
+	transition-duration: .3s;
+	transition-delay: .1s;
+}
+
+.skill-container:hover .design-skill-name {
+	font-weight: 700;
+	text-transform: uppercase;
+	color: rgb(255, 255, 255);
 }
 
 .photoshop-knowlege {
@@ -567,7 +584,7 @@ body {
 .behance-link {
 	max-width: 300px;
 	width: 90%;
-	height: 50px;
+	height: 56px;
 
 	display: flex;
 	justify-content: space-evenly;
@@ -598,13 +615,13 @@ body {
 	font-size: 16px;
 	font-weight: 500;
 	color: rgba(255, 255, 255, .3);
+
+	transition-duration: .3s;
+	transition-delay: .1s;
 }
 
 .behance-link:hover .behance-text {
 	color: var(--color-hover-text);
-
-	transition-duration: .3s;
-	transition-delay: .1s;
 }
 
 .btn-behance {
@@ -723,7 +740,7 @@ body {
 #btn-send-message {
 	position: relative;
 	width: 100%;
-	height: 35px;
+	height: 41px;
 
 	display: flex;
 	gap: 30px;
