@@ -180,7 +180,7 @@
     </div>
 
     <a href="https://www.behance.net/szabogaborHUN" target=”_blank” class="behance-link">
-      <i class="fa-brands fa-square-behance"></i>
+      <i class="btn-behance fa-brands fa-square-behance"></i>
       <p class="behance-text">Behance</p>
     </a>
   </div>
@@ -191,19 +191,42 @@
     <h2 class="title-front">Contact</h2>
   </div>
 
-  <div class="footer-container">
-    <form action="" class="contact-form-group">
-      <div class="sender-data-container">
-        <input type="text" class="sender-data" required placeholder="Name">
-        <input type="email" class="sender-data" required placeholder="Email address">
-      </div>
-      <textarea name="message" id="message" cols="30" rows="6" required placeholder="Write your message"></textarea>
-      <button id="btn-send-message">Send message</button>
-    </form>
+  <div class="contact-container">
+    <div class="gradient">
+      <form action="" class="contact-form-group">
+        <div class="sender-data-container">
+          <input type="text" class="sender-data" required placeholder="Name">
+          <input type="email" class="sender-data" required placeholder="Email address">
+        </div>
+        <textarea name="message" id="message" cols="30" rows="6" required placeholder="Write your message"></textarea>
+        <button id="btn-send-message"><i class="fa-regular fa-envelope"></i>Send message</button>
+      </form>
+
+    </div>
   </div>
 
   <!-- Footer -->
-  <div class="demo"></div>
+  <footer class="footer">
+    <div class="footer-container">
+      <a href="#home" class="logo">
+        <img src="/assets/img/GS-logo.svg" alt="Logo" />
+        <div class="logo-underline"></div>
+      </a>
+      <div class="footer-right">
+        <div class="footer-links">
+          <a href="https://www.linkedin.com/in/g%C3%A1bor-szab%C3%B3-477a652a/" target=”_blank” class="footer-link"><i
+              class="fa-brands fa-linkedin"></i></a>
+          <a href="https://www.behance.net/szabogaborHUN" target=”_blank” class="footer-link"><i
+              class="fa-brands fa-square-behance"></i></a>
+
+
+        </div>
+        <p class="rights">&copy All rights reserved. Created by Gabor Szabo</p>
+      </div>
+
+    </div>
+  </footer>
+
 </body>
 
 </html>
