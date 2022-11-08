@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/GaborSzaboHUN/portfolio-site#readme",
   "dependencies": {
-    "scrollreveal": "^4.0.9"
+    "scrollreveal": "^4.0.9",
+    "swiper": "^8.4.4"
   }
 }

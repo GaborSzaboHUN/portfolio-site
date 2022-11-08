@@ -45,3 +45,34 @@ const listItemsToggle = (e) => {
 }
 
 window.addEventListener("click", listItemsToggle)
+
+
+/* - - - - Swiper - - - - */
+const swiper = new Swiper(".my-swiper", {
+    effect: "coverflow",
+    centeredSlides: true,
+    slidesPerView: "auto",
+    mousewheel: true,
+    grabCursor: true,
+    loop: true,
+    coverflowEffect: {
+        rotate: 50,
+        stretch: 0,
+        depth: 100,
+        modifier: 1,
+        slideShadows: true,
+    },
+
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+        dynamicBullets: true,
+    },
+
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+})
+
+

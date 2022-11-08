@@ -211,12 +211,12 @@ body {
 /* - - - - MAIN - - - - */
 .main-container {
 	width: 100%;
-	height: 100vh;
+	height: 90vh;
 }
 
 .image-container {
 	width: 100%;
-	height: 90vh;
+	height: 100%;
 
 	background-image: linear-gradient(180deg, #04293A 12%, rgba(4, 41, 58, 0.4) 40.1%, #04293A 85%), url(/assets/img/eberhard-grossgasteiger-ofxFTUWoHNY-unsplash_S.jpg);
 	background-size: cover;
@@ -303,6 +303,48 @@ body {
 
 /* - - - - PORTFOLIO - - - - */
 
+.portfolio-container {
+	max-width: 1000px;
+	width: 100%;
+
+	margin: 30px auto 0;
+}
+
+.swiper-slide {
+	width: 285px !important;
+	height: 285px !important;
+}
+
+/* 
+.swiper-slide:hover::after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+
+	background-color: #C84B31;
+	display: block;
+}
+ */
+.swiper-slide img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.swiper-pagination-bullet-active {
+	background-color: var(--color-full-yellow) !important;
+}
+
+.swiper-pagination-bullet-active-next,
+.swiper-pagination-bullet-active-next-next,
+.swiper-pagination-bullet-active-prev,
+.swiper-pagination-bullet-active-prev-prev {
+	background-color: var(--color-full-yellow) !important;
+}
+
 /* - - - - END PORTFOLIO - - - - */
 
 /* - - - - ABOUT - - - - */
@@ -339,6 +381,9 @@ body {
 }
 
 .personal-container {
+	position: relative;
+	top: 80px;
+
 	display: flex;
 	flex-wrap: wrap;
 	gap: 46px;

@@ -2,237 +2,277 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap"
-    rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet" />
 
-  <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
 
-  <script src="https://kit.fontawesome.com/0f88116e95.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 
-  <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
 
-  <script src="/js/app.js" defer></script>
+    <script src="https://kit.fontawesome.com/0f88116e95.js" crossorigin="anonymous"></script>
 
-  <title>SG Portfolio</title>
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+
+    <script src="/js/app.js" defer></script>
+
+    <title>SG Portfolio</title>
 </head>
 
 <body>
-  <!-- Navigation -->
+    <!-- Navigation -->
 
-  <header class="header">
-    <nav class="navbar__container">
-      <a href="#home" class="logo">
-        <img src="/assets/img/GS-logo.svg" alt="Logo" />
-        <div class="logo-underline"></div>
-      </a>
-      <div class="navigation-container">
-        <ul class="navbar__list">
-          <li class="navbar__list-item">
-            <a class="navbar__list-link" href="#">home</a>
-          </li>
-          <li class="navbar__list-item">
-            <a class="navbar__list-link" href="#">portfolio</a>
-          </li>
-          <li class="navbar__list-item">
-            <a class="navbar__list-link" href="#">about</a>
-          </li>
-          <li class="navbar__list-item">
-            <a class="navbar__list-link" href="#">contact</a>
-          </li>
-        </ul>
-      </div>
-      <div class="hamburger-menu" id="menu-toggler">
-        <div class="bar-top"></div>
-        <div class="bar-mid"></div>
-        <div class="bar-bottom"></div>
-      </div>
-    </nav>
-  </header>
-
-
-
-  <!-- Main -->
-  <section class="main-container">
-    <div class="image-container"></div>
-    <div class="name-container">
-      <h1 class="name">GABOR SZABO</h1>
-    </div>
-    <div class="forward-icon-container">
-      <a href="#portfolio"><i class="fa-solid fa-sort-down"></i></a>
-    </div>
-  </section>
+    <header class="header">
+        <nav class="navbar__container">
+            <a href="#" class="logo">
+                <img src="/assets/img/GS-logo.svg" alt="Logo" />
+                <div class="logo-underline"></div>
+            </a>
+            <div class="navigation-container">
+                <ul class="navbar__list">
+                    <li class="navbar__list-item">
+                        <a class="navbar__list-link" href="#">home</a>
+                    </li>
+                    <li class="navbar__list-item">
+                        <a class="navbar__list-link" href="#portfolio">portfolio</a>
+                    </li>
+                    <li class="navbar__list-item">
+                        <a class="navbar__list-link" href="#about">about</a>
+                    </li>
+                    <li class="navbar__list-item">
+                        <a class="navbar__list-link" href="#contact">contact</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="hamburger-menu" id="menu-toggler">
+                <div class="bar-top"></div>
+                <div class="bar-mid"></div>
+                <div class="bar-bottom"></div>
+            </div>
+        </nav>
+    </header>
 
 
 
-  <!-- Portfolio -->
-  <section class="title-container">
-    <p class="title-back">Portfolio</p>
-    <h2 class="title-front">Portfolio</h2>
-  </section>
-
-
-
-  <!-- About -->
-
-  <div class="title-container">
-    <h2 class="title-back">About</h2>
-    <h2 class="title-front">About</h2>
-  </div>
-
-  <div class="personal-container">
-
-    <div class="profile-image">
-      <p class="image-name">Gabor</p>
-      <p class="image-name">Szabo</p>
-    </div>
-
-    <p class="introduction-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-      incididunt ut labore et dolore magna aliqua. Mattis pellentesque id nibh tortor id aliquet lectus proin. Lorem
-      ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-      aliqua. Mattis pellentesque id nibh tortor id aliquet lectus proin.</p>
-  </div>
-
-  <div class="skills-container">
-
-    <div class="skill-container web">
-      <p class="skill-name">HTML</p>
-      <i class="skill-icon fa-brands fa-html5"></i>
-      <div class="xp-level html-knowlege"></div>
-      <div class="reference-bar"></div>
-    </div>
-
-    <div class="skill-container web">
-      <p class="skill-name">CSS</p>
-      <i class="skill-icon fa-brands fa-css3-alt"></i>
-      <div class="xp-level css-knowlege"></div>
-      <div class="reference-bar"></div>
-    </div>
-
-    <div class="skill-container web">
-      <p class="skill-name">SCSS</p>
-      <i class="skill-icon fa-brands fa-sass"></i>
-      <div class="xp-level sass-knowlege"></div>
-      <div class="reference-bar"></div>
-    </div>
-
-    <div class="skill-container web">
-      <p class="skill-name">BOOTSTRAP</p>
-      <i class="skill-icon fa-brands fa-bootstrap"></i>
-      <div class="xp-level bootstrap-knowlege"></div>
-      <div class="reference-bar"></div>
-    </div>
-
-    <div class="skill-container web">
-      <p class="skill-name">JAVASCRIPT</p>
-      <i class="skill-icon fa-brands fa-js"></i>
-      <div class="xp-level js-knowlege"></div>
-      <div class="reference-bar"></div>
-    </div>
-
-    <div class="skill-container web">
-      <p class="skill-name">REACT</p>
-      <i class="skill-icon fa-brands fa-react"></i>
-      <div class="xp-level react-knowlege"></div>
-      <div class="reference-bar"></div>
-    </div>
-
-  </div>
-
-  <div class="design-container">
-    <div class="skills-container designs">
-
-      <div class="skill-container design">
-        <p class="design-skill-name">Photoshop</p>
-        <div class="xp-level photoshop-knowlege"></div>
-        <div class="reference-bar"></div>
-      </div>
-
-      <div class="skill-container design">
-        <p class="design-skill-name">Illustrator</p>
-        <div class="xp-level illustrator-knowlege"></div>
-        <div class="reference-bar"></div>
-      </div>
-
-      <div class="skill-container design">
-        <p class="design-skill-name">Indesign</p>
-        <div class="xp-level indesign-knowlege"></div>
-        <div class="reference-bar"></div>
-      </div>
-
-      <div class="skill-container design">
-        <p class="design-skill-name">Premiere Pro</p>
-        <div class="xp-level premierepro-knowlege"></div>
-        <div class="reference-bar"></div>
-      </div>
-
-      <div class="skill-container design">
-        <p class="design-skill-name">After Effects</p>
-        <div class="xp-level aftereffects-knowlege"></div>
-        <div class="reference-bar"></div>
-      </div>
-
-      <div class="skill-container design">
-        <p class="design-skill-name">3ds Max</p>
-        <div class="xp-level dsmax-knowlege"></div>
-        <div class="reference-bar"></div>
-      </div>
-
-    </div>
-
-    <a href="https://www.behance.net/szabogaborHUN" target=”_blank” class="behance-link">
-      <i class="btn-behance fa-brands fa-square-behance"></i>
-      <p class="behance-text">Behance</p>
-    </a>
-  </div>
-
-  <!-- Contact -->
-  <div class="title-container">
-    <h2 class="title-back">Contact</h2>
-    <h2 class="title-front">Contact</h2>
-  </div>
-
-  <div class="contact-container">
-    <div class="gradient">
-      <form action="" class="contact-form-group">
-        <div class="sender-data-container">
-          <input type="text" class="sender-data" required placeholder="Name">
-          <input type="email" class="sender-data" required placeholder="Email address">
+    <!-- Main -->
+    <section class="main-container">
+        <div class="image-container"></div>
+        <div class="name-container">
+            <h1 class="name">GABOR SZABO</h1>
         </div>
-        <textarea name="message" id="message" cols="30" rows="6" required placeholder="Write your message"></textarea>
-        <button id="btn-send-message"><i class="fa-regular fa-envelope"></i>Send message</button>
-      </form>
+        <div class="forward-icon-container">
+            <a href="#portfolio"><i class="fa-solid fa-sort-down"></i></a>
+        </div>
+    </section>
+
+
+
+    <!-- Portfolio -->
+    <div class="title-container" id="portfolio">
+        <p class="title-back">Portfolio</p>
+        <h2 class="title-front">Portfolio</h2>
+    </div>
+
+    <section class="portfolio-container">
+        <div class="swiper my-swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="https://source.unsplash.com/500x500" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="https://source.unsplash.com/501x501" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="https://source.unsplash.com/502x502" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="https://source.unsplash.com/503x503" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="https://source.unsplash.com/504x504" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="https://source.unsplash.com/505x505" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="https://source.unsplash.com/506x506" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="https://source.unsplash.com/507x507" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="https://source.unsplash.com/508x508" alt="">
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+
+    <!-- About -->
+
+    <div class="title-container" id="about">
+        <h2 class="title-back">About</h2>
+        <h2 class="title-front">About</h2>
+    </div>
+
+    <div class="personal-container">
+
+        <picture class="profile-image">
+            <p class="image-name">Gabor</p>
+            <p class="image-name">Szabo</p>
+        </picture>
+
+        <p class="introduction-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua. Mattis pellentesque id nibh tortor id aliquet lectus proin.
+            Lorem
+            ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+            magna
+            aliqua. Mattis pellentesque id nibh tortor id aliquet lectus proin.</p>
+    </div>
+
+    <div class="skills-container">
+
+        <div class="skill-container web">
+            <p class="skill-name">HTML</p>
+            <i class="skill-icon fa-brands fa-html5"></i>
+            <div class="xp-level html-knowlege"></div>
+            <div class="reference-bar"></div>
+        </div>
+
+        <div class="skill-container web">
+            <p class="skill-name">CSS</p>
+            <i class="skill-icon fa-brands fa-css3-alt"></i>
+            <div class="xp-level css-knowlege"></div>
+            <div class="reference-bar"></div>
+        </div>
+
+        <div class="skill-container web">
+            <p class="skill-name">SCSS</p>
+            <i class="skill-icon fa-brands fa-sass"></i>
+            <div class="xp-level sass-knowlege"></div>
+            <div class="reference-bar"></div>
+        </div>
+
+        <div class="skill-container web">
+            <p class="skill-name">BOOTSTRAP</p>
+            <i class="skill-icon fa-brands fa-bootstrap"></i>
+            <div class="xp-level bootstrap-knowlege"></div>
+            <div class="reference-bar"></div>
+        </div>
+
+        <div class="skill-container web">
+            <p class="skill-name">JAVASCRIPT</p>
+            <i class="skill-icon fa-brands fa-js"></i>
+            <div class="xp-level js-knowlege"></div>
+            <div class="reference-bar"></div>
+        </div>
+
+        <div class="skill-container web">
+            <p class="skill-name">REACT</p>
+            <i class="skill-icon fa-brands fa-react"></i>
+            <div class="xp-level react-knowlege"></div>
+            <div class="reference-bar"></div>
+        </div>
 
     </div>
-  </div>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="footer-container">
-      <a href="#home" class="logo">
-        <img src="/assets/img/GS-logo.svg" alt="Logo" />
-        <div class="logo-underline"></div>
-      </a>
-      <div class="footer-right">
-        <div class="footer-links">
-          <a href="https://www.linkedin.com/in/g%C3%A1bor-szab%C3%B3-477a652a/" target=”_blank” class="footer-link"><i
-              class="fa-brands fa-linkedin"></i></a>
-          <a href="https://www.behance.net/szabogaborHUN" target=”_blank” class="footer-link"><i
-              class="fa-brands fa-square-behance"></i></a>
+    <div class="design-container">
+        <div class="skills-container designs">
 
+            <div class="skill-container design">
+                <p class="design-skill-name">Photoshop</p>
+                <div class="xp-level photoshop-knowlege"></div>
+                <div class="reference-bar"></div>
+            </div>
+
+            <div class="skill-container design">
+                <p class="design-skill-name">Illustrator</p>
+                <div class="xp-level illustrator-knowlege"></div>
+                <div class="reference-bar"></div>
+            </div>
+
+            <div class="skill-container design">
+                <p class="design-skill-name">Indesign</p>
+                <div class="xp-level indesign-knowlege"></div>
+                <div class="reference-bar"></div>
+            </div>
+
+            <div class="skill-container design">
+                <p class="design-skill-name">Premiere Pro</p>
+                <div class="xp-level premierepro-knowlege"></div>
+                <div class="reference-bar"></div>
+            </div>
+
+            <div class="skill-container design">
+                <p class="design-skill-name">After Effects</p>
+                <div class="xp-level aftereffects-knowlege"></div>
+                <div class="reference-bar"></div>
+            </div>
+
+            <div class="skill-container design">
+                <p class="design-skill-name">3ds Max</p>
+                <div class="xp-level dsmax-knowlege"></div>
+                <div class="reference-bar"></div>
+            </div>
 
         </div>
-        <p class="rights">&copy All rights reserved. Created by Gabor Szabo</p>
-      </div>
 
+        <a href="https://www.behance.net/szabogaborHUN" target=”_blank” class="behance-link">
+            <i class="btn-behance fa-brands fa-square-behance"></i>
+            <p class="behance-text">Behance</p>
+        </a>
     </div>
-  </footer>
+
+    <!-- Contact -->
+    <div class="title-container" id="contact">
+        <h2 class="title-back">Contact</h2>
+        <h2 class="title-front">Contact</h2>
+    </div>
+
+    <div class="contact-container">
+        <div class="gradient">
+            <form action="" class="contact-form-group">
+                <div class="sender-data-container">
+                    <input type="text" class="sender-data" required placeholder="Name">
+                    <input type="email" class="sender-data" required placeholder="Email address">
+                </div>
+                <textarea name="message" id="message" cols="30" rows="6" required
+                    placeholder="Write your message"></textarea>
+                <button id="btn-send-message"><i class="fa-regular fa-envelope"></i>Send message</button>
+            </form>
+
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <a href="#" class="logo">
+                <img src="/assets/img/GS-logo.svg" alt="Logo" />
+                <div class="logo-underline"></div>
+            </a>
+            <div class="footer-right">
+                <div class="footer-links">
+                    <a href="https://www.linkedin.com/in/g%C3%A1bor-szab%C3%B3-477a652a/" target=”_blank”
+                        class="footer-link"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://www.behance.net/szabogaborHUN" target=”_blank” class="footer-link"><i
+                            class="fa-brands fa-square-behance"></i></a>
+
+
+                </div>
+                <p class="rights">&copy All rights reserved. Created by Gabor Szabo</p>
+            </div>
+
+        </div>
+    </footer>
 
 </body>
 
