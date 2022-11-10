@@ -76,3 +76,51 @@ const swiper = new Swiper(".my-swiper", {
 })
 
 
+/* - - - - Web Knowledge Component - - - - */
+const webKnowledgeCardComponent = (title, icon, experience) => {
+    return `
+        <div class="skill-container web">
+            <p class="skill-name">${title}</p>
+            ${icon}
+            <div class="xp-level ${experience}"></div>
+            <div class="reference-bar"></div>
+        </div>
+    `
+}
+
+const webLoadEvent = () => {
+    const webKnowledgeElement = document.getElementById("web-knowledge")
+
+    for (webSkill of webSkills) {
+
+        webKnowledgeElement.insertAdjacentHTML("beforeend", webKnowledgeCardComponent(webSkill.title, webSkill.icon, webSkill.experience))
+    }
+
+}
+
+window.addEventListener("load", webLoadEvent)
+
+
+
+/* - - - - Design Knowledge Component - - - - */
+const designKnowledgeCardComponent = (title, experience) => {
+    return `
+        <div class="skill-container design">
+            <p class="design-skill-name">${title}</p>
+            <div class="xp-level ${experience}"></div>
+            <div class="reference-bar"></div>
+        </div>
+    `
+}
+
+const designLoadEvent = () => {
+    const designKnowledgeElement = document.getElementById("design-knowledge")
+
+    for (designSkill of designSkills) {
+
+        designKnowledgeElement.insertAdjacentHTML("beforeend", designKnowledgeCardComponent(designSkill.title, designSkill.icon, designSkill.experience))
+    }
+
+}
+
+window.addEventListener("load", designLoadEvent)
