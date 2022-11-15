@@ -47,6 +47,8 @@ const listItemsToggle = (e) => {
 window.addEventListener("click", listItemsToggle)
 
 
+
+
 /* - - - - Swiper - - - - */
 const swiper = new Swiper(".my-swiper", {
     effect: "coverflow",
@@ -56,7 +58,7 @@ const swiper = new Swiper(".my-swiper", {
     grabCursor: true,
     loop: true,
     coverflowEffect: {
-        rotate: 50,
+        rotate: 40,
         stretch: 0,
         depth: 100,
         modifier: 1,
@@ -75,6 +77,29 @@ const swiper = new Swiper(".my-swiper", {
     },
 })
 
+
+/* - - - - Portfolio Component - - - - */
+/* 
+const portfolioCardComponent = (source) => {
+    return `
+    <div class="swiper-slide">
+        <div class="swiper-overlay">
+            <button class="btn-show-more">Show more</button>
+        </div>
+        <img src=${source} alt="">
+    </div>
+    `
+}
+
+const portfolioLoadEvent = () => {
+    const swiperWrapper = document.getElementById("swiper-wrapper")
+
+    for (project of portfolio) {
+        swiperWrapper.insertAdjacentHTML("beforeend", portfolioCardComponent(project.imgLink))
+    }
+}
+window.addEventListener("load", portfolioLoadEvent)
+ */
 
 /* - - - - Web Knowledge Component - - - - */
 const webKnowledgeCardComponent = (title, icon, experience) => {
@@ -118,7 +143,7 @@ const designLoadEvent = () => {
 
     for (designSkill of designSkills) {
 
-        designKnowledgeElement.insertAdjacentHTML("beforeend", designKnowledgeCardComponent(designSkill.title, designSkill.icon, designSkill.experience))
+        designKnowledgeElement.insertAdjacentHTML("beforeend", designKnowledgeCardComponent(designSkill.title, designSkill.experience))
     }
 
 }

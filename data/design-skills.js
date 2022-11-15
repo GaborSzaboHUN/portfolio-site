@@ -23,5 +23,4 @@ const designSkills = [
         "title": "3ds Max",
         "experience": "dsmax-knowledge"
     },
-
 ]
