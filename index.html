@@ -79,7 +79,8 @@
 
 
     <!-- Portfolio -->
-    <div class="title-container" id="portfolio">
+    <div class="nav-placeholder" id="portfolio"></div>
+    <div class="title-container">
         <p class="title-back">Portfolio</p>
         <h2 class="title-front">Portfolio</h2>
     </div>
@@ -94,48 +95,56 @@
                     </div>
                     <img src="https://source.unsplash.com/500x500" alt="">
                 </div>
+
                 <div class="swiper-slide">
                     <div class="swiper-overlay">
                         <button class="btn-show-more">Show more</button>
                     </div>
                     <img src="https://source.unsplash.com/501x501" alt="">
                 </div>
+
                 <div class="swiper-slide">
                     <div class="swiper-overlay">
                         <button class="btn-show-more">Show more</button>
                     </div>
                     <img src="https://source.unsplash.com/502x502" alt="">
                 </div>
+
                 <div class="swiper-slide">
                     <div class="swiper-overlay">
                         <button class="btn-show-more">Show more</button>
                     </div>
                     <img src="https://source.unsplash.com/503x503" alt="">
                 </div>
+
                 <div class="swiper-slide">
                     <div class="swiper-overlay">
                         <button class="btn-show-more">Show more</button>
                     </div>
                     <img src="https://source.unsplash.com/504x504" alt="">
                 </div>
+
                 <div class="swiper-slide">
                     <div class="swiper-overlay">
                         <button class="btn-show-more">Show more</button>
                     </div>
                     <img src="https://source.unsplash.com/505x505" alt="">
                 </div>
+
                 <div class="swiper-slide">
                     <div class="swiper-overlay">
                         <button class="btn-show-more">Show more</button>
                     </div>
                     <img src="https://source.unsplash.com/506x506" alt="">
                 </div>
+
                 <div class="swiper-slide">
                     <div class="swiper-overlay">
                         <button class="btn-show-more">Show more</button>
                     </div>
                     <img src="https://source.unsplash.com/507x507" alt="">
                 </div>
+
                 <div class="swiper-slide">
                     <div class="swiper-overlay">
                         <button class="btn-show-more">Show more</button>
@@ -147,11 +156,35 @@
 
             <div class="swiper-pagination"></div>
         </div>
+        <!-- 
+        <div class="portfolio-details">
+            <div class="portfolio-details-container">
+
+                <div class="project-image">
+                    <img src="https://source.unsplash.com/50x500" alt="">
+                </div>
+
+                <div class="project-details">
+                    <div class="project-details-text">
+                        <h3 class="project-title">Project tile</h3>
+                        <p class="project-details-describe">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                            do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mattis pellentesque id nibh
+                            tortor id aliquet lectus proin.</p>
+                    </div>
+                </div>
+
+                <div id="btn-portfolio-close"><i class="fa-solid fa-xmark"></i></div>
+
+            </div>
+
+        </div>
+         -->
     </section>
 
     <!-- About -->
+    <div class="nav-placeholder" id="about"></div>
 
-    <div class="title-container" id="about">
+    <div class="title-container">
         <h2 class="title-back">About</h2>
         <h2 class="title-front">About</h2>
     </div>
@@ -165,10 +198,8 @@
 
         <p class="introduction-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
             incididunt ut labore et dolore magna aliqua. Mattis pellentesque id nibh tortor id aliquet lectus proin.
-            Lorem
-            ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-            magna
-            aliqua. Mattis pellentesque id nibh tortor id aliquet lectus proin.</p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua. Mattis pellentesque id nibh tortor id aliquet lectus proin.</p>
     </div>
 
 
@@ -184,21 +215,24 @@
     </div>
 
     <!-- Contact -->
-    <div class="title-container" id="contact">
+    <div class="nav-placeholder" id="contact"></div>
+
+    <div class="title-container">
         <h2 class="title-back">Contact</h2>
         <h2 class="title-front">Contact</h2>
     </div>
 
     <div class="contact-container">
         <div class="gradient">
-            <form action="" class="contact-form-group">
+            <form action="https://getform.io/f/34f7fd76-e12b-422d-89e3-c6cfabd51b35" method="POST"
+                class="contact-form-group">
                 <div class="sender-data-container">
-                    <input type="text" class="sender-data" required placeholder="Name">
-                    <input type="email" class="sender-data" required placeholder="Email address">
+                    <input type="text" name="name" class="sender-data" required placeholder="Name">
+                    <input type="email" name="email" class="sender-data" required placeholder="Email address">
                 </div>
                 <textarea name="message" id="message" cols="30" rows="6" required
                     placeholder="Write your message"></textarea>
-                <button id="btn-send-message">
+                <button type="submit" id="btn-send-message">
                     <i class="fa-regular fa-envelope"></i>
                     <p class="btn-send-text">Send message</p>
                 </button>

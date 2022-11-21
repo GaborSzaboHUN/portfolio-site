@@ -83,23 +83,27 @@ const swiper = new Swiper(".my-swiper", {
 const portfolioCardComponent = (source) => {
     return `
     <div class="swiper-slide">
-        <div class="swiper-overlay">
-            <button class="btn-show-more">Show more</button>
-        </div>
-        <img src=${source} alt="">
+    <div class="swiper-overlay">
+    <button class="btn-show-more">Show more</button>
+    </div>
+    <img src=${source} alt="">
     </div>
     `
 }
 
 const portfolioLoadEvent = () => {
-    const swiperWrapper = document.getElementById("swiper-wrapper")
+    const swiperWrapper = document.querySelector("#swiper-wrapper")
 
     for (project of portfolio) {
         swiperWrapper.insertAdjacentHTML("beforeend", portfolioCardComponent(project.imgLink))
     }
 }
+
 window.addEventListener("load", portfolioLoadEvent)
  */
+
+
+
 
 /* - - - - Web Knowledge Component - - - - */
 const webKnowledgeCardComponent = (title, icon, experience) => {
@@ -149,3 +153,8 @@ const designLoadEvent = () => {
 }
 
 window.addEventListener("load", designLoadEvent)
+
+
+
+/* - - - - Design Knowledge Component - - - - */
+
