@@ -19,8 +19,8 @@
 
     <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js" defer></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
-    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 
     <script src="/data/portfolio.js"></script>
     <script src="/data/web-skills.js"></script>
@@ -93,93 +93,95 @@
                     <div class="swiper-overlay">
                         <button class="btn-show-more">Show more</button>
                     </div>
-                    <img src="https://source.unsplash.com/500x500" alt="">
+                    <img src="/assets/img/austin-schmid-0asZ7HcEHSQ-unsplash.jpg" alt="">
                 </div>
 
                 <div class="swiper-slide">
                     <div class="swiper-overlay">
                         <button class="btn-show-more">Show more</button>
                     </div>
-                    <img src="https://source.unsplash.com/501x501" alt="">
+                    <img src="/assets/img/dave-goudreau-OxtLUqXKW-Y-unsplash.jpg" alt="">
                 </div>
 
                 <div class="swiper-slide">
                     <div class="swiper-overlay">
                         <button class="btn-show-more">Show more</button>
                     </div>
-                    <img src="https://source.unsplash.com/502x502" alt="">
+                    <img src="/assets/img/eugene-golovesov-f6lbUDprkoQ-unsplash.jpg" alt="">
                 </div>
 
                 <div class="swiper-slide">
                     <div class="swiper-overlay">
                         <button class="btn-show-more">Show more</button>
                     </div>
-                    <img src="https://source.unsplash.com/503x503" alt="">
+                    <img src="/assets/img/ian-talmacs-pe6U_FqAXvU-unsplash.jpg" alt="">
                 </div>
 
                 <div class="swiper-slide">
                     <div class="swiper-overlay">
                         <button class="btn-show-more">Show more</button>
                     </div>
-                    <img src="https://source.unsplash.com/504x504" alt="">
+                    <img src="/assets/img/janmesh-shah-EXyVT3q4J_8-unsplash.jpg" alt="">
                 </div>
 
                 <div class="swiper-slide">
                     <div class="swiper-overlay">
                         <button class="btn-show-more">Show more</button>
                     </div>
-                    <img src="https://source.unsplash.com/505x505" alt="">
+                    <img src="/assets/img/kellen-riggin-G9SJLINNdcA-unsplash.jpg" alt="">
                 </div>
 
                 <div class="swiper-slide">
                     <div class="swiper-overlay">
                         <button class="btn-show-more">Show more</button>
                     </div>
-                    <img src="https://source.unsplash.com/506x506" alt="">
+                    <img src="/assets/img/nantu-das-wYJM9PCbURg-unsplash.jpg" alt="">
                 </div>
 
                 <div class="swiper-slide">
                     <div class="swiper-overlay">
                         <button class="btn-show-more">Show more</button>
                     </div>
-                    <img src="https://source.unsplash.com/507x507" alt="">
+                    <img src="/assets/img/wolfgang-hasselmann--AuNuqFUPQ8-unsplash.jpg" alt="">
                 </div>
 
                 <div class="swiper-slide">
                     <div class="swiper-overlay">
                         <button class="btn-show-more">Show more</button>
                     </div>
-                    <img src="https://source.unsplash.com/508x508" alt="">
+                    <img src="/assets/img/wolfgang-hasselmann-jl3bltYgs8c-unsplash.jpg" alt="">
                 </div>
 
             </div>
 
             <div class="swiper-pagination"></div>
         </div>
-        <!-- 
-        <div class="portfolio-details">
-            <div class="portfolio-details-container">
+    </section>
 
-                <div class="project-image">
-                    <img src="https://source.unsplash.com/50x500" alt="">
-                </div>
+    <div class="portfolio-details">
+        <div class="portfolio-details-container">
 
-                <div class="project-details">
-                    <div class="project-details-text">
-                        <h3 class="project-title">Project tile</h3>
-                        <p class="project-details-describe">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                            do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mattis pellentesque id nibh
-                            tortor id aliquet lectus proin.</p>
-                    </div>
-                </div>
-
-                <div id="btn-portfolio-close"><i class="fa-solid fa-xmark"></i></div>
-
+            <div class="project-details">
+                <h3 class="project-title">Project tile</h3>
+                <p class="project-details-describe">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mattis pellentesque id nibh
+                    tortor id aliquet lectus proin.</p>
             </div>
 
+            <div class="project-button-container">
+                <a class="btn-project" href="#">
+                    <i class="fa-solid fa-circle-arrow-right"></i>
+                    <p class="project-btn-text">Go to the project</p>
+                </a>
+
+                <a class="btn-project" href="#">
+                    <i class="fa-brands fa-github"></i>
+                    <p class="project-btn-text">Check the code</p>
+                </a>
+            </div>
         </div>
-         -->
-    </section>
+    </div>
+
 
     <!-- About -->
     <div class="nav-placeholder" id="about"></div>
@@ -227,11 +229,12 @@
             <form action="https://getform.io/f/34f7fd76-e12b-422d-89e3-c6cfabd51b35" method="POST"
                 class="contact-form-group">
                 <div class="sender-data-container">
-                    <input type="text" name="name" class="sender-data" required placeholder="Name">
-                    <input type="email" name="email" class="sender-data" required placeholder="Email address">
+                    <input type="text" name="name" class="sender-data" required placeholder="Name" autocomplete="off">
+                    <input type="email" name="email" class="sender-data" required placeholder="Email address"
+                        autocomplete="off">
                 </div>
-                <textarea name="message" id="message" cols="30" rows="6" required
-                    placeholder="Write your message"></textarea>
+                <textarea name="message" id="message" cols="30" rows="6" required placeholder="Write your message"
+                    autocomplete="off"></textarea>
                 <button type="submit" id="btn-send-message">
                     <i class="fa-regular fa-envelope"></i>
                     <p class="btn-send-text">Send message</p>

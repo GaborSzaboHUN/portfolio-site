@@ -46,10 +46,32 @@ const listItemsToggle = (e) => {
 
 window.addEventListener("click", listItemsToggle)
 
+/* - - - - Portfolio Component - - - - */
+/* 
+const swiperSlideComponent = source => {
+    return `
+    <div class="swiper-slide">
+        <div class="swiper-overlay">
+            <button class="btn-show-more">Show more</button>
+        </div>
+        <img src=${source} alt="">
+    </div>
+    `
+}
 
+const swiperSlideLoadEvent = () => {
+    const swiperWrapperElement = document.querySelector("#swiper-wrapper")
 
+    for (portfolioElement of portfolio) {
+        swiperWrapperElement.insertAdjacentHTML("beforeend", swiperSlideComponent(portfolioElement.imgLink))
+    }
+}
+
+window.addEventListener("load", swiperSlideLoadEvent)
+ */
 
 /* - - - - Swiper - - - - */
+
 const swiper = new Swiper(".my-swiper", {
     effect: "coverflow",
     centeredSlides: true,
@@ -78,33 +100,6 @@ const swiper = new Swiper(".my-swiper", {
 })
 
 
-/* - - - - Portfolio Component - - - - */
-/* 
-const portfolioCardComponent = (source) => {
-    return `
-    <div class="swiper-slide">
-    <div class="swiper-overlay">
-    <button class="btn-show-more">Show more</button>
-    </div>
-    <img src=${source} alt="">
-    </div>
-    `
-}
-
-const portfolioLoadEvent = () => {
-    const swiperWrapper = document.querySelector("#swiper-wrapper")
-
-    for (project of portfolio) {
-        swiperWrapper.insertAdjacentHTML("beforeend", portfolioCardComponent(project.imgLink))
-    }
-}
-
-window.addEventListener("load", portfolioLoadEvent)
- */
-
-
-
-
 /* - - - - Web Knowledge Component - - - - */
 const webKnowledgeCardComponent = (title, icon, experience) => {
     return `
@@ -124,7 +119,6 @@ const webLoadEvent = () => {
 
         webKnowledgeElement.insertAdjacentHTML("beforeend", webKnowledgeCardComponent(webSkill.title, webSkill.icon, webSkill.experience))
     }
-
 }
 
 window.addEventListener("load", webLoadEvent)
@@ -156,5 +150,19 @@ window.addEventListener("load", designLoadEvent)
 
 
 
-/* - - - - Design Knowledge Component - - - - */
+/* - - - - Clear contact form - - - - */
+const inputFields = document.querySelectorAll(".sender-data")
+const messageArea = document.querySelector("#message")
+const sendButton = document.querySelector("#btn-send-message")
+
+setTimeout(function clearInputFields() {
+    inputFields[0].value = ""
+    inputFields[1].value = ""
+    messageArea.value = ""
+}, 100)
+
+sendButton.addEventListener("click", clearInputFields)
+
+
+
 
