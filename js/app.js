@@ -100,6 +100,71 @@ const swiper = new Swiper(".my-swiper", {
 })
 
 
+/* - - - - Project details - - - - */
+
+const projectDescriptionComponent = (id, title, details, projectLink, gitLink) => {
+    return `
+    <div class="portfolio-details-container hidden" id=${id}>
+
+            <div class="project-details">
+                <h3 class="project-title">${title}</h3>
+                <p class="project-details-describe">${details}</p>
+            </div>
+
+            <div class="project-button-container">
+                <a class="btn-project" href=${projectLink}>
+                    <i class="fa-solid fa-circle-arrow-right"></i>
+                    <p class="project-btn-text">Go to the project</p>
+                </a>
+
+                <a class="btn-project" href=${gitLink}>
+                    <i class="fa-brands fa-github"></i>
+                    <p class="project-btn-text">Check the code</p>
+                </a>
+            </div>
+        </div>
+    `
+}
+
+const projectDescriptionLoadEvent = () => {
+    const portfolioDetailsElement = document.getElementById("portfolio-details")
+
+    for (project of portfolio) {
+        portfolioDetailsElement.insertAdjacentHTML("beforeend", projectDescriptionComponent(project.id, project.title, project.details, project.liveProject, project.gitLink))
+    }
+}
+
+window.addEventListener("load", projectDescriptionLoadEvent)
+
+/* - - - - Project details visibility- - - - */
+const swiperElement = document.querySelector(".swiper")
+let activeSwiperSlideId = "1"
+
+const projectDetailsVisible = () => {
+    activeSwiperSlideId = document.querySelector(".swiper-slide-active").id.slice(12)
+    console.log(activeSwiperSlideId)
+
+    const projectDetailsElements = document.querySelectorAll(".portfolio-details-container")
+    for (projectDetailsElement of projectDetailsElements) {
+        if (projectDetailsElement.id === activeSwiperSlideId) {
+            projectDetailsElement.classList.remove("hidden")
+        } else {
+            projectDetailsElement.classList.add("hidden")
+        }
+    }
+}
+
+window.addEventListener("load", projectDetailsVisible)
+swiperElement.addEventListener("mousemove", projectDetailsVisible)
+swiperElement.addEventListener("wheel", projectDetailsVisible)
+swiperElement.addEventListener("touchstart", projectDetailsVisible)
+swiperElement.addEventListener("touchend", projectDetailsVisible)
+swiperElement.addEventListener("touchcancel", projectDetailsVisible)
+swiperElement.addEventListener("touchmove", projectDetailsVisible)
+
+
+
+
 /* - - - - Web Knowledge Component - - - - */
 const webKnowledgeCardComponent = (title, icon, experience) => {
     return `

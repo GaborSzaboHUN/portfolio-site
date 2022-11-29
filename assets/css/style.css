@@ -1,5 +1,6 @@
 /* 
 - swiper show more button issue
+- Menu text moving at hover
 */
 
 /* - - - - VARIABLES - - - - */
@@ -367,6 +368,11 @@ body {
 	height: 285px !important;
 }
 
+.swiper-slide-active {
+	transform: scale(1.2) !important;
+	z-index: 2
+}
+
 .swiper-overlay {
 	position: absolute;
 	width: 100%;
@@ -428,7 +434,7 @@ body {
 	background-color: var(--color-full-yellow) !important;
 }
 
-.portfolio-details {
+#portfolio-details {
 	position: relative;
 	display: block;
 	padding: 30px 10px;
@@ -438,10 +444,15 @@ body {
 }
 
 .portfolio-details-container {
+	display: block;
 	max-width: 750px;
 	width: 100%;
 
 	margin: 0 auto;
+}
+
+.hidden {
+	display: none;
 }
 
 .project-title {
@@ -466,6 +477,7 @@ body {
 	display: flex;
 	flex-wrap: wrap;
 	gap: 15px;
+	justify-content: end;
 
 
 	width: 100%;
@@ -565,7 +577,10 @@ body {
 
 	padding: 0 15px;
 
-	background-color: #C84B31;
+	background-image: url("/assets/img/PEP_8539RT_V2.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
 }
 
 .image-name {
@@ -580,6 +595,7 @@ body {
 
 	-webkit-text-fill-color: transparent;
 	-webkit-text-stroke: 1px var(--color-full-yellow);
+	text-shadow: -5px -5px 3px rgba(0, 0, 0, 0.45);
 }
 
 .image-name:first-child {
