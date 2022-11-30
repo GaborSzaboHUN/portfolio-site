@@ -1,6 +1,6 @@
 /* 
-- swiper show more button issue
-- Menu text moving at hover
+- moving text
+- moving background
 */
 
 /* - - - - VARIABLES - - - - */
@@ -72,10 +72,10 @@ body {
 /* - - - - NAVIGATION - - - - */
 .header {
 	position: fixed;
-	width: 100%;
+	width: 100vw;
 	z-index: 100;
 
-	padding: 25px 0 12px;
+	padding: 25px 0 10px;
 	background-color: var(--color-base-blue);
 
 	transition: padding .25s;
@@ -161,6 +161,22 @@ body {
 	text-align: center;
 
 	transition: .35s;
+}
+
+.navbar__list-item:first-child {
+	min-width: 44px;
+}
+
+.navbar__list-item:nth-child(2) {
+	min-width: 63px;
+}
+
+.navbar__list-item:nth-child(3) {
+	min-width: 45px;
+}
+
+.navbar__list-item:last-child {
+	min-width: 58px;
 }
 
 .navbar__list-item:hover {
@@ -320,6 +336,7 @@ body {
 
 	text-align: center;
 	font-family: var(--title-font);
+	overflow: hidden;
 }
 
 .title-front {
@@ -558,7 +575,7 @@ body {
 
 .personal-container {
 	position: relative;
-	top: 80px;
+	top: 60px;
 
 	display: flex;
 	flex-wrap: wrap;
@@ -577,10 +594,20 @@ body {
 
 	padding: 0 15px;
 
-	background-image: url("/assets/img/PEP_8539RT_V2.jpg");
+	background-image: url("/assets/img/PEP_8539RT_V2A-BW.png");
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
+
+	transition-duration: 1s;
+	transition-delay: .1s;
+}
+
+.profile-image:hover {
+	background-image: url("/assets/img/PEP_8539RT_V2A-CLR.png");
+
+	transition-duration: 1s;
+	transition-delay: .1s;
 }
 
 .image-name {
@@ -1109,6 +1136,22 @@ body {
 
 
 /* - - - - Responsive - - - - */
+
+@media only screen and (min-width: 280px) {
+
+	/* Hide scrollbar for Chrome, Safari and Opera */
+	body::-webkit-scrollbar {
+		display: none;
+	}
+
+	/* Hide scrollbar for IE, Edge and Firefox */
+	body {
+		-ms-overflow-style: none;
+		/* IE and Edge */
+		scrollbar-width: none;
+		/* Firefox */
+	}
+}
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
