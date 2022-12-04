@@ -462,8 +462,12 @@ body {
 }
 
 .portfolio-details-container {
-	display: block;
+	min-height: 210px;
 	max-width: 750px;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 	width: 100%;
 
 	margin: 0 auto;

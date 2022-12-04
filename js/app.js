@@ -112,12 +112,12 @@ const projectDescriptionComponent = (id, title, details, projectLink, gitLink) =
             </div>
 
             <div class="project-button-container">
-                <a class="btn-project" href=${projectLink}>
+                <a class="btn-project" href=${projectLink} target=”_blank”>
                     <i class="fa-solid fa-circle-arrow-right"></i>
                     <p class="project-btn-text">Go to the project</p>
                 </a>
 
-                <a class="btn-project" href=${gitLink}>
+                <a class="btn-project" href=${gitLink} target=”_blank”>
                     <i class="fa-brands fa-github"></i>
                     <p class="project-btn-text">Check the code</p>
                 </a>
