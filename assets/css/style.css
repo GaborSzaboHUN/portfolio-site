@@ -73,7 +73,7 @@ body {
 .header {
 	position: fixed;
 	width: 100vw;
-	z-index: 100;
+	z-index: 1000;
 
 	padding: 25px 0 10px;
 	background-color: var(--color-base-blue);
@@ -132,8 +132,8 @@ body {
 	border: 1px solid rgba(255, 255, 255, 0.1);
 	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 
-	transform: translateX(-100vw);
-	background-color: rgba(236, 219, 186, 0.6);
+	transform: translateX(-101vw);
+	background-color: rgba(255, 255, 255, 0.75);
 	backdrop-filter: blur(5px);
 	-webkit-backdrop-filter: blur(5px);
 
@@ -141,7 +141,7 @@ body {
 }
 
 .navigation-container.active {
-	top: 62px;
+	top: 60px;
 }
 
 .navigation-container.open {
@@ -234,17 +234,18 @@ body {
 
 /* - - - - END NAVIGATION - - - - */
 
-/* - - - - MAIN - - - - */
+/* - - - - MAIN IMAGE - - - - */
 .main-container {
 	width: 100%;
-	height: 90vh;
+	height: 100vh;
 }
 
 .image-container {
 	width: 100%;
 	height: 100%;
 
-	background-image: linear-gradient(180deg, #04293A 12%, rgba(4, 41, 58, 0.4) 40.1%, #04293A 85%), url(/assets/img/eberhard-grossgasteiger-ofxFTUWoHNY-unsplash_S.jpg);
+	/* 	background-image: linear-gradient(180deg, #04293A 12%, rgba(4, 41, 58, 0.4) 40.1%, #04293A 85%), url(/assets/img/eberhard-grossgasteiger-ofxFTUWoHNY-unsplash_S.jpg); */
+	background-image: linear-gradient(180deg, rgba(4, 41, 58, 1) 10%, rgba(4, 41, 58, 0.2) 40.1%, rgba(4, 41, 58, 0.8) 100%), url(/assets/img/eberhard-grossgasteiger-ofxFTUWoHNY-unsplash_S.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
@@ -325,7 +326,7 @@ body {
 	}
 }
 
-/* - - - - END MAIN - - - - */
+/* - - - - END MAIN IMAGE - - - - */
 
 .title-container {
 	position: relative;
@@ -375,7 +376,7 @@ body {
 	max-width: 1200px;
 	width: 100%;
 
-	margin: 30px auto 0;
+	margin: 40px auto 0;
 }
 
 
@@ -635,6 +636,12 @@ body {
 	position: absolute;
 	right: -35px;
 	bottom: 30px;
+}
+
+.introduction-text-container {
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
 }
 
 .introduction-text {
@@ -914,7 +921,7 @@ body {
 }
 
 .gradient {
-	background-image: linear-gradient(180deg, #04293A 0%, rgba(4, 41, 58, 0.5) 100%);
+	background-image: linear-gradient(180deg, #04293A 0%, rgba(4, 41, 58, 0.35) 100%);
 }
 
 .contact-form-group {
@@ -1153,146 +1160,152 @@ body {
 	}
 }
 
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
-	.navigation-container {
-		position: initial;
-		width: initial;
-		height: initial;
-
-		flex-direction: row;
-
-		border: initial;
-		box-shadow: initial;
-
-		transform: initial;
-		background-color: transparent;
-		backdrop-filter: none;
-		-webkit-backdrop-filter: none;
-
-		transition: none;
-	}
-
-	.navbar__list {
-		display: flex;
-		flex-direction: row;
-		gap: 20px;
-	}
-
-	.navbar__list-item {
-		color: var(--color-white);
-		padding: 0;
-		border-bottom: 2px solid transparent;
-
-		font-size: 14px;
-		font-weight: 300;
-	}
-
-	.navbar__list-item:hover {
-		padding-left: 0;
-		border-bottom: 2px solid var(--color-full-yellow);
-	}
-
-	.hamburger-menu {
-		display: none;
-	}
-
-	.image-container {
-		background-image: linear-gradient(180deg, #04293A 12%, rgba(4, 41, 58, 0.4) 40.1%, #04293A 85%), url(/assets/img/eberhard-grossgasteiger-ofxFTUWoHNY-unsplash_M.jpg);
-	}
-
-	.contact-container {
-		background-image: url(/assets/img/jason-blackeye-FzURx0rFhUk-unsplash_M.jpg);
-	}
-
-	.personal-container {
-		width: 60%;
-	}
-
-	.sender-data-container {
-		flex-wrap: nowrap;
-	}
-
-	#btn-send-message {
-		max-width: 240px;
-		align-self: flex-end;
-	}
-}
-
-/* Medium devices (landscape tablets, 768px and up) */
-
-@media only screen and (min-width: 583px) {
-	.btn-project {
-		width: 250px;
-	}
-}
-
-@media only screen and (min-width: 768px) {
-	.project-button-container {
-		gap: 30px;
-	}
-
-	.personal-container {
-		width: 750px;
-		gap: 0;
-		justify-content: space-around;
-	}
-
-	.profile-image {
-		width: 237px;
-		height: 304px;
-	}
-
-	.image-name:last-child {
-		position: absolute;
-		right: -55px;
-		bottom: 64px;
-	}
-
-	.image-name:first-child {
-		position: absolute;
-		right: -18px;
-		bottom: 29px;
-	}
-
-	.introduction-text {
-		padding: 3% 0 0;
-		max-width: 467px;
-	}
-
-	.skills-container {
-		max-width: 650px;
-	}
-
-}
-
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 400px) {
 	.main-container {
-		height: 80vh;
+		height: 90vh;
 	}
 
-	.swiper-slide {
-		width: 310px !important;
-		height: 310px !important;
+	/* Small devices (portrait tablets and large phones, 600px and up) */
+	@media only screen and (min-width: 600px) {
+		.navigation-container {
+			position: initial;
+			width: initial;
+			height: initial;
+
+			flex-direction: row;
+
+			border: initial;
+			box-shadow: initial;
+
+			transform: initial;
+			background-color: transparent;
+			backdrop-filter: none;
+			-webkit-backdrop-filter: none;
+
+			transition: none;
+		}
+
+		.navbar__list {
+			display: flex;
+			flex-direction: row;
+			gap: 20px;
+		}
+
+		.navbar__list-item {
+			color: var(--color-white);
+			padding: 0;
+			border-bottom: 2px solid transparent;
+
+			font-size: 14px;
+			font-weight: 300;
+		}
+
+		.navbar__list-item:hover {
+			padding-left: 0;
+			border-bottom: 2px solid var(--color-full-yellow);
+		}
+
+		.hamburger-menu {
+			display: none;
+		}
+
+		.image-container {
+			background-image: linear-gradient(180deg, #04293A 12%, rgba(4, 41, 58, 0.4) 40.1%, #04293A 85%), url(/assets/img/eberhard-grossgasteiger-ofxFTUWoHNY-unsplash_M.jpg);
+		}
+
+		.contact-container {
+			background-image: url(/assets/img/jason-blackeye-FzURx0rFhUk-unsplash_M.jpg);
+		}
+
+		.personal-container {
+			width: 60%;
+		}
+
+		.sender-data-container {
+			flex-wrap: nowrap;
+		}
+
+		#btn-send-message {
+			max-width: 240px;
+			align-self: flex-end;
+		}
 	}
 
-	.project-button-container {
-		padding: 0;
+	/* Medium devices (landscape tablets, 768px and up) */
+
+	@media only screen and (min-width: 583px) {
+		.btn-project {
+			width: 250px;
+		}
 	}
 
-	.personal-container {
-		justify-content: space-between;
-	}
-}
+	@media only screen and (min-width: 768px) {
 
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
-	.image-container {
-		background-image: linear-gradient(180deg, #04293A 12%, rgba(4, 41, 58, 0.4) 40.1%, #04293A 85%), url(/assets/img/eberhard-grossgasteiger-ofxFTUWoHNY-unsplash_L.jpg);
+		.project-button-container {
+			gap: 30px;
+		}
+
+		.personal-container {
+			width: 750px;
+			gap: 0;
+			justify-content: space-around;
+		}
+
+		.profile-image {
+			width: 237px;
+			height: 304px;
+		}
+
+		.image-name:last-child {
+			position: absolute;
+			right: -55px;
+			bottom: 64px;
+		}
+
+		.image-name:first-child {
+			position: absolute;
+			right: -18px;
+			bottom: 29px;
+		}
+
+		.introduction-text {
+			padding: 3% 0 0px;
+			max-width: 467px;
+		}
+
+		.skills-container {
+			max-width: 650px;
+		}
+
 	}
 
-	.contact-container {
-		background-image: url(/assets/img/jason-blackeye-FzURx0rFhUk-unsplash_L.jpg);
+	/* Large devices (laptops/desktops, 992px and up) */
+	@media only screen and (min-width: 992px) {
+		.main-container {
+			height: 80vh;
+		}
+
+		.swiper-slide {
+			width: 310px !important;
+			height: 310px !important;
+		}
+
+		.project-button-container {
+			padding: 0;
+		}
+
+		.personal-container {
+			justify-content: space-between;
+		}
 	}
-}
+
+	/* Extra large devices (large laptops and desktops, 1200px and up) */
+	@media only screen and (min-width: 1200px) {
+		.image-container {
+			background-image: linear-gradient(180deg, #04293A 12%, rgba(4, 41, 58, 0.4) 40.1%, #04293A 85%), url(/assets/img/eberhard-grossgasteiger-ofxFTUWoHNY-unsplash_L.jpg);
+		}
+
+		.contact-container {
+			background-image: url(/assets/img/jason-blackeye-FzURx0rFhUk-unsplash_L.jpg);
+		}
+	}

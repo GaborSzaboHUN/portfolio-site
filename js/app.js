@@ -214,6 +214,28 @@ const designLoadEvent = () => {
 window.addEventListener("load", designLoadEvent)
 
 
+/* - - - - Scroll reveal - - - - */
+const sr = ScrollReveal({
+    distance: "50px",
+    duration: 1500,
+    easing: "cubic-bezier(0.68, -0.05, 0.256, 1.55)"
+})
+
+sr.reveal(".name, .forward-icon-container, .title-container, .portfolio-container, .skills-container, .behance-link", {
+    origin: "top",
+    interval: 40
+})
+sr.reveal(".profile-image, input:nth-child(1)", {
+    origin: "left",
+    interval: 40
+})
+sr.reveal(".introduction-text, input:nth-child(2)", {
+    origin: "right",
+    interval: 40
+})
+sr.reveal("#portfolio-details, #message", {
+    interval: 40
+})
 
 /* - - - - Clear contact form - - - - */
 const inputFields = document.querySelectorAll(".sender-data")
