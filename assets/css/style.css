@@ -395,7 +395,7 @@ body {
 	position: absolute;
 	width: 100%;
 	height: 100%;
-	opacity: 0;
+	opacity: .7;
 
 	background: linear-gradient(180deg, rgba(4, 28, 50, 0.2) 0%, rgba(4, 28, 50, 0.8) 100%);
 
@@ -404,7 +404,7 @@ body {
 }
 
 .swiper-slide:hover .swiper-overlay {
-	opacity: 1;
+	opacity: .2;
 }
 
 .btn-show-more {
