@@ -30,6 +30,7 @@
 
 html {
 	scroll-behavior: smooth;
+	overflow-x: hidden;
 }
 
 a {
@@ -268,6 +269,7 @@ body {
 
 	z-index: 99999;
 }
+
 
 .forward-icon-container {
 	position: relative;

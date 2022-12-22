@@ -221,7 +221,7 @@ const sr = ScrollReveal({
     easing: "cubic-bezier(0.68, -0.05, 0.256, 1.55)"
 })
 
-sr.reveal(".name", {
+sr.reveal(".name-container", {
     origin: "top",
     interval: 40
 })
