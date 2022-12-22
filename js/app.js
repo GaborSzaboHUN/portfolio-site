@@ -223,7 +223,6 @@ const sr = ScrollReveal({
 
 sr.reveal(".name", {
     origin: "top",
-    interval: 0
 })
 sr.reveal(".forward-icon-container, .title-container, .portfolio-container, .skills-container, .behance-link", {
     origin: "top",
