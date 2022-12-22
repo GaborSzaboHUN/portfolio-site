@@ -36,7 +36,7 @@ const portfolio = [
         "title": "Build a Behance UI/UX/Web project",
         "details": "I have created this project to practice UI build. I looked for a nice web design on Behance and built it using <strong>HTML</strong> and <strong>CSS</strong> and added small effects.",
         "imgLink": "/assets/img/Behance-Sitebuild.png",
-        "liveProject": "#",
+        "liveProject": "https://gaborszabohun.github.io/behanceProjectW2/",
         "gitLink": "https://github.com/GaborSzaboHUN/behanceProjectW2"
     },
 ]
