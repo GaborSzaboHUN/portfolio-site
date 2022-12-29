@@ -258,18 +258,16 @@ body {
 
 	font-family: var(--title-font);
 	font-size: 60px;
-	line-height: 110px;
+	font-weight: lighter;
+	/* 	line-height: 110px; */
+	line-height: 90px;
 	letter-spacing: 2px;
 	text-align: center;
 
-	-webkit-text-fill-color: transparent;
-	-webkit-text-stroke: 0.001px var(--color-full-yellow);
+	text-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
 
-	color: rgba(4, 41, 58, 0);
-
-	z-index: 99999;
+	color: var(--color-full-yellow);
 }
-
 
 .forward-icon-container {
 	position: relative;
@@ -354,8 +352,12 @@ body {
 	font-size: 70px;
 	letter-spacing: 8px;
 
+	opacity: .7;
+	color: var(--color-base-blue);
+	text-shadow: 0 0 1px var(--color-full-yellow);
+	/* 
 	-webkit-text-fill-color: transparent;
-	-webkit-text-stroke: .01px rgba(255, 255, 255, .1);
+	-webkit-text-stroke: .01px rgba(255, 255, 255, .1); */
 }
 
 .nav-placeholder {
@@ -1278,6 +1280,26 @@ body {
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
+	.name-container {
+		position: absolute;
+		top: 35vh;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 100%;
+
+		padding: 20px;
+
+		font-family: var(--title-font);
+		font-size: 60px;
+		line-height: 110px;
+		letter-spacing: 2px;
+
+		text-align: center;
+
+		-webkit-text-fill-color: transparent;
+		-webkit-text-stroke: 0.001px var(--color-full-yellow);
+	}
+
 	.image-container {
 		background-image: linear-gradient(180deg, #04293A 12%, rgba(4, 41, 58, 0.4) 40.1%, #04293A 85%), url("/assets/img/eberhard-grossgasteiger-ofxFTUWoHNY-unsplash_L.jpg");
 	}
