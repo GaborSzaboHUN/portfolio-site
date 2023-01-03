@@ -493,15 +493,18 @@ body {
 	font-weight: 200;
 }
 
-.btn-project:hover {
-	background-color: var(--color-light-yellow);
-	border-left: none;
-	border-top: none;
-	border-right: none;
-	border-bottom: 6px solid var(--color-full-yellow);
+@media(hover: hover) and (pointer: fine) {
 
-	transition-duration: .3s;
-	transition-delay: .1s;
+	.btn-project:hover {
+		background-color: var(--color-light-yellow);
+		border-left: none;
+		border-top: none;
+		border-right: none;
+		border-bottom: 6px solid var(--color-full-yellow);
+
+		transition-duration: .3s;
+		transition-delay: .1s;
+	}
 }
 
 .project-btn-text {
@@ -518,11 +521,13 @@ body {
 	transition-delay: .1s;
 }
 
-.btn-project:hover .project-btn-text {
-	left: 55%;
-	color: var(--color-hover-text);
-	font-weight: 500;
-	opacity: 1;
+@media(hover: hover) and (pointer: fine) {
+	.btn-project:hover .project-btn-text {
+		left: 55%;
+		color: var(--color-hover-text);
+		font-weight: 500;
+		opacity: 1;
+	}
 }
 
 .fa-circle-arrow-right,
@@ -538,15 +543,17 @@ body {
 	opacity: 0;
 }
 
-.btn-project:hover .fa-circle-arrow-right,
-.btn-project:hover .fa-github {
-	opacity: 1;
-	left: 18%;
+@media(hover: hover) and (pointer: fine) {
 
-	transition-duration: .3s;
-	transition-delay: .1s;
+	.btn-project:hover .fa-circle-arrow-right,
+	.btn-project:hover .fa-github {
+		opacity: 1;
+		left: 18%;
+
+		transition-duration: .3s;
+		transition-delay: .1s;
+	}
 }
-
 
 
 /* - - - - END PORTFOLIO - - - - */
@@ -840,14 +847,16 @@ body {
 	transition-delay: .1s;
 }
 
-.behance-link:hover {
-	height: 56px;
-	border-left: none;
-	border-top: none;
-	border-right: none;
-	border-bottom: 6px solid var(--color-full-yellow);
+@media(hover: hover) and (pointer: fine) {
+	.behance-link:hover {
+		height: 56px;
+		border-left: none;
+		border-top: none;
+		border-right: none;
+		border-bottom: 6px solid var(--color-full-yellow);
 
-	background-color: var(--color-light-yellow);
+		background-color: var(--color-light-yellow);
+	}
 }
 
 .behance-text {
@@ -864,9 +873,11 @@ body {
 	transition-delay: .1s;
 }
 
-.behance-link:hover .behance-text {
-	left: 55%;
-	color: var(--color-hover-text);
+@media(hover: hover) and (pointer: fine) {
+	.behance-link:hover .behance-text {
+		left: 55%;
+		color: var(--color-hover-text);
+	}
 }
 
 .btn-behance {
@@ -879,12 +890,14 @@ body {
 	color: var(--color-hover-text);
 }
 
-.behance-link:hover .btn-behance {
-	opacity: 1;
-	left: 18%;
+@media(hover: hover) and (pointer: fine) {
+	.behance-link:hover .btn-behance {
+		opacity: 1;
+		left: 18%;
 
-	transition-duration: .3s;
-	transition-delay: .1s;
+		transition-duration: .3s;
+		transition-delay: .1s;
+	}
 }
 
 /* - - - - END ABOUT - - - - */
@@ -946,12 +959,15 @@ body {
 	background-color: var(--color-light-blue);
 }
 
-#message:hover,
-.sender-data:hover {
-	border: 1px solid rgba(255, 255, 255, .3);
+@media(hover: hover) and (pointer: fine) {
 
-	transition-duration: .3s;
-	transition-delay: .1s;
+	#message:hover,
+	.sender-data:hover {
+		border: 1px solid rgba(255, 255, 255, .3);
+
+		transition-duration: .3s;
+		transition-delay: .1s;
+	}
 }
 
 #message:focus,
@@ -996,15 +1012,17 @@ body {
 	transition-delay: .1s;
 }
 
-#btn-send-message:hover {
-	height: 41px;
+@media(hover: hover) and (pointer: fine) {
+	#btn-send-message:hover {
+		height: 41px;
 
-	background-color: var(--color-light-yellow);
+		background-color: var(--color-light-yellow);
 
-	border-left: none;
-	border-top: none;
-	border-right: none;
-	border-bottom: 6px solid var(--color-full-yellow);
+		border-left: none;
+		border-top: none;
+		border-right: none;
+		border-bottom: 6px solid var(--color-full-yellow);
+	}
 }
 
 .btn-send-text {
@@ -1043,6 +1061,7 @@ body {
 	transition-delay: .1s;
 }
 
+
 #btn-send-message:hover .fa-envelope {
 	opacity: 1;
 	left: 14%;
@@ -1050,6 +1069,7 @@ body {
 	transition-duration: .3s;
 	transition-delay: .1s;
 }
+
 
 /* - - - - END CONTACT - - - - */
 

@@ -142,7 +142,7 @@ let activeSwiperSlideId = "1"
 
 const projectDetailsVisible = () => {
     activeSwiperSlideId = document.querySelector(".swiper-slide-active").id.slice(12)
-    console.log(activeSwiperSlideId)
+    /* console.log(activeSwiperSlideId) */
 
     const projectDetailsElements = document.querySelectorAll(".portfolio-details-container")
     for (projectDetailsElement of projectDetailsElements) {
@@ -241,7 +241,3 @@ setTimeout(function clearInputFields() {
 }, 100)
 
 sendButton.addEventListener("click", clearInputFields)
-
-
-
-
