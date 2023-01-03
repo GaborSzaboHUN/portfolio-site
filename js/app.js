@@ -208,7 +208,6 @@ const designLoadEvent = () => {
 
         designKnowledgeElement.insertAdjacentHTML("beforeend", designKnowledgeCardComponent(designSkill.title, designSkill.experience))
     }
-
 }
 
 window.addEventListener("load", designLoadEvent)
@@ -221,26 +220,14 @@ const sr = ScrollReveal({
     easing: "cubic-bezier(0.68, -0.05, 0.256, 1.55)"
 })
 
-sr.reveal(".name-container", {
+sr.reveal(".name-container, .forward-icon-container, .title-back, .title-front, .portfolio-container, .skills-container, .behance-link, .profile-image, input:nth-child(1), .introduction-text, input:nth-child(2), #portfolio-details, #message", {
     origin: "top",
-    interval: 40
+    interval: 60
 })
 
-sr.reveal(".forward-icon-container, .title-container, .portfolio-container, .skills-container, .behance-link", {
-    origin: "top",
-    interval: 40
-})
-sr.reveal(".profile-image, input:nth-child(1)", {
-    origin: "left",
-    interval: 40
-})
-sr.reveal(".introduction-text, input:nth-child(2)", {
-    origin: "right",
-    interval: 40
-})
-sr.reveal("#portfolio-details, #message", {
-    interval: 40
-})
+/* - - - - Email validation - - - - */
+
+
 
 /* - - - - Clear contact form - - - - */
 const inputFields = document.querySelectorAll(".sender-data")
