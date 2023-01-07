@@ -71,7 +71,6 @@ window.addEventListener("load", swiperSlideLoadEvent)
  */
 
 /* - - - - Swiper - - - - */
-
 const swiper = new Swiper(".my-swiper", {
     effect: "coverflow",
     centeredSlides: true,
@@ -101,7 +100,6 @@ const swiper = new Swiper(".my-swiper", {
 
 
 /* - - - - Project details - - - - */
-
 const projectDescriptionComponent = (id, title, details, projectLink, gitLink) => {
     return `
     <div class="portfolio-details-container hidden" id=${id}>
@@ -220,33 +218,28 @@ const sr = ScrollReveal({
     easing: "cubic-bezier(0.68, -0.05, 0.256, 1.55)"
 })
 
-sr.reveal(".name-container, .forward-icon-container, .title-back, .title-front, .portfolio-container, .skills-container, .behance-link, .profile-image, .introduction-text, .sender-data, .checkbox-container, #btn-send-message, #portfolio-details, #message", {
+sr.reveal(".name-container, .forward-icon-container, .title-back, .title-front, .portfolio-container, .skills-container, .behance-link, .profile-image, .introduction-text, .sender-data, .checkbox-container, .button-container, #portfolio-details, #message", {
     origin: "top",
     interval: 60
 })
 
 /* - - - - Email validation - - - - */
 
-/* 
-- button hover effect disable amíg nincs a checkbox kipipálva / vagy felé rakni valamilyen halvány réteget
-*/
-
 const checkBox = document.getElementById("checkbox")
 const inputEmail = document.querySelector(".sender-data[name=email]")
 const mailFormat = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
 const badEmail = document.querySelector(".bad-email")
 const emailAlertClose = document.getElementById("email-alert-close")
+const disabledLayer = document.querySelector(".disabled-layer")
 
 const isChecked = function () {
     if (checkBox.checked === true) {
-        console.log("Checked")
         if (inputEmail.value.match(mailFormat)) {
+            disabledLayer.classList.add("hidden")
         } else {
             badEmail.classList.remove("hidden")
             checkBox.checked = false
         }
-    } else {
-        console.log("UnChecked")
     }
 }
 
@@ -256,6 +249,10 @@ emailAlertClose.addEventListener("click", function () {
 
 checkBox.addEventListener("click", isChecked)
 
+inputEmail.addEventListener("click", function () {
+    checkBox.checked = false
+    disabledLayer.classList.remove("hidden")
+})
 
 /* - - - - Clear contact form - - - - */
 const inputFields = document.querySelectorAll(".sender-data")
