@@ -197,12 +197,24 @@
                     <input type="text" name="name" class="sender-data" required placeholder="Name" autocomplete="off">
                     <input type="email" name="email" class="sender-data" required placeholder="Email address">
                 </div>
+                <div class="bad-email hidden">
+                    <p>I have found a problem with the email format try something similar: <br>example@example.com
+                    </p>
+                    <i class="fa-solid fa-xmark" id="email-alert-close"></i>
+                </div>
                 <textarea name="message" id="message" cols="30" rows="6" required placeholder="Write your message"
                     autocomplete="off"></textarea>
-                <button type="submit" id="btn-send-message">
-                    <i class="fa-regular fa-envelope"></i>
-                    <p class="btn-send-text">Send message</p>
-                </button>
+
+                <div class="send-container">
+                    <div class="checkbox-container">
+                        <input type="checkbox" name="checkbox" id="checkbox" required>
+                        <label for="checkbox">I am not a robot and checked the message before sending.</label>
+                    </div>
+                    <button type="submit" id="btn-send-message" disabled>
+                        <i class="fa-regular fa-envelope"></i>
+                        <p class="btn-send-text">Send message</p>
+                    </button>
+                </div>
             </form>
 
         </div>

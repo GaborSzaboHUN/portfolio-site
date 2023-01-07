@@ -304,7 +304,7 @@ body {
 
 .fa-sort-down.fa-sort-down:hover {
 	animation: down-forward .8s ease-in infinite;
-	filter: drop-shadow(0 0 4px #fff);
+	filter: drop-shadow(0 0 4px var(--color-white));
 }
 
 @keyframes down-forward {
@@ -379,7 +379,6 @@ body {
 	margin: 40px auto 0;
 }
 
-
 .swiper-slide {
 	position: relative;
 	width: 285px !important;
@@ -447,9 +446,6 @@ body {
 	margin: 0 auto;
 }
 
-.hidden {
-	display: none;
-}
 
 .project-title {
 	font-family: var(--subtitle-font);
@@ -931,9 +927,7 @@ body {
 	flex-wrap: wrap;
 	flex-direction: column;
 	justify-content: space-between;
-	align-items: center;
 	gap: 20px;
-
 }
 
 .sender-data-container {
@@ -956,6 +950,110 @@ body {
 	border: 1px solid rgba(255, 255, 255, 0);
 
 	padding-inline: 12px;
+	background-color: var(--color-light-blue);
+}
+
+.bad-email {
+	width: 100%;
+
+	display: flex;
+	justify-content: space-between;
+	gap: 12px;
+
+	padding: 12px;
+
+	background-color: rgba(0, 0, 0, 0.5);
+	color: var(--color-white);
+
+	opacity: 1;
+
+	transition-duration: .3s;
+	transition-delay: .1s;
+
+}
+
+.bad-email>p {
+	font-family: var(--body-font);
+	font-weight: 300;
+	font-size: 12px;
+	line-height: 18px;
+	letter-spacing: 1px;
+}
+
+.bad-email>i {
+	box-sizing: border-box;
+
+	height: fit-content;
+	border: 1px solid var(--color-white);
+	padding: 4px 7px;
+
+	opacity: .5;
+
+	transition-duration: .3s;
+	transition-delay: .1s;
+}
+
+.bad-email>i:hover {
+	opacity: 1;
+	border: 1px solid rgba(255, 255, 255, 0);
+	background-color: var(--color-red);
+}
+
+.send-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	gap: 20px;
+}
+
+.checkbox-container {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+input[type=checkbox] {
+	min-width: 15px;
+	height: 15px;
+
+	border: 1px solid var(--color-full-yellow);
+
+	transition: .3s ease-in-out;
+}
+
+input[type=checkbox]:checked {
+	background-color: var(--color-full-yellow);
+}
+
+input[type=checkbox]:checked::after {
+	content: "\f00c";
+	font-family: "Font Awesome 5 Free";
+	font-size: small;
+	font-weight: 900;
+	color: var(--color-base-blue);
+
+	margin: auto;
+}
+
+label[for=checkbox] {
+	font-family: var(--body-font);
+	font-size: 12px;
+	font-weight: 300;
+	color: var(--color-white);
+}
+
+#message {
+	width: 100%;
+
+	font-family: var(--body-font);
+	font-size: 14px;
+	font-weight: 300;
+	letter-spacing: 0.02em;
+	color: var(--color-white);
+	border: 1px solid rgba(255, 255, 255, 0);
+
+	padding: 12px;
 	background-color: var(--color-light-blue);
 }
 
@@ -986,18 +1084,10 @@ body {
 	transition-delay: .1s;
 }
 
-#message {
+.inactive {
+	background-color: #C84B31;
 	width: 100%;
-
-	font-family: var(--body-font);
-	font-size: 14px;
-	font-weight: 300;
-	letter-spacing: 0.02em;
-	color: var(--color-white);
-	border: 1px solid rgba(255, 255, 255, 0);
-
-	padding: 12px;
-	background-color: var(--color-light-blue);
+	height: 41px;
 }
 
 #btn-send-message {
@@ -1143,6 +1233,10 @@ body {
 
 /* - - - - END FOOTER - - - - */
 
+.hidden {
+	display: none;
+	opacity: 0;
+}
 
 /* - - - - Responsive - - - - */
 
@@ -1166,6 +1260,13 @@ body {
 	.main-container {
 		height: 90vh;
 	}
+}
+
+@media only screen and (min-width: 510px) {
+	.send-container {
+		flex-wrap: nowrap;
+	}
+
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -1230,7 +1331,6 @@ body {
 
 	#btn-send-message {
 		max-width: 240px;
-		align-self: flex-end;
 	}
 }
 

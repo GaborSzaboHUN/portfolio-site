@@ -220,13 +220,41 @@ const sr = ScrollReveal({
     easing: "cubic-bezier(0.68, -0.05, 0.256, 1.55)"
 })
 
-sr.reveal(".name-container, .forward-icon-container, .title-back, .title-front, .portfolio-container, .skills-container, .behance-link, .profile-image, input:nth-child(1), .introduction-text, input:nth-child(2), #portfolio-details, #message", {
+sr.reveal(".name-container, .forward-icon-container, .title-back, .title-front, .portfolio-container, .skills-container, .behance-link, .profile-image, .introduction-text, .sender-data, .checkbox-container, #btn-send-message, #portfolio-details, #message", {
     origin: "top",
     interval: 60
 })
 
 /* - - - - Email validation - - - - */
 
+/* 
+- button hover effect disable amíg nincs a checkbox kipipálva / vagy felé rakni valamilyen halvány réteget
+*/
+
+const checkBox = document.getElementById("checkbox")
+const inputEmail = document.querySelector(".sender-data[name=email]")
+const mailFormat = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+const badEmail = document.querySelector(".bad-email")
+const emailAlertClose = document.getElementById("email-alert-close")
+
+const isChecked = function () {
+    if (checkBox.checked === true) {
+        console.log("Checked")
+        if (inputEmail.value.match(mailFormat)) {
+        } else {
+            badEmail.classList.remove("hidden")
+            checkBox.checked = false
+        }
+    } else {
+        console.log("UnChecked")
+    }
+}
+
+emailAlertClose.addEventListener("click", function () {
+    badEmail.classList.add("hidden")
+})
+
+checkBox.addEventListener("click", isChecked)
 
 
 /* - - - - Clear contact form - - - - */
@@ -238,6 +266,7 @@ setTimeout(function clearInputFields() {
     inputFields[0].value = ""
     inputFields[1].value = ""
     messageArea.value = ""
+    checkBox.checked = false
 }, 100)
 
 sendButton.addEventListener("click", clearInputFields)
