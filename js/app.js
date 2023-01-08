@@ -160,9 +160,6 @@ swiperElement.addEventListener("touchend", projectDetailsVisible)
 swiperElement.addEventListener("touchcancel", projectDetailsVisible)
 swiperElement.addEventListener("touchmove", projectDetailsVisible)
 
-
-
-
 /* - - - - Web Knowledge Component - - - - */
 const webKnowledgeCardComponent = (title, icon, experience) => {
     return `
@@ -224,7 +221,6 @@ sr.reveal(".name-container, .forward-icon-container, .title-back, .title-front, 
 })
 
 /* - - - - Email validation - - - - */
-
 const checkBox = document.getElementById("checkbox")
 const inputEmail = document.querySelector(".sender-data[name=email]")
 const mailFormat = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
