@@ -255,7 +255,7 @@ const inputFields = document.querySelectorAll(".sender-data")
 const messageArea = document.querySelector("#message")
 const sendButton = document.querySelector("#btn-send-message")
 
-setTimeout(function clearInputFields() {
+const clearInputFields = setTimeout(function () {
     inputFields[0].value = ""
     inputFields[1].value = ""
     messageArea.value = ""
