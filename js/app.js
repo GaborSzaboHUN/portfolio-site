@@ -236,6 +236,8 @@ const isChecked = function () {
             badEmail.classList.remove("hidden")
             checkBox.checked = false
         }
+    } else {
+        disabledLayer.classList.remove("hidden")
     }
 }
 
